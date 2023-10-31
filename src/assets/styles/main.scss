@@ -1,0 +1,91 @@
+@import './colors.scss';
+@import './fonts.scss';
+@import './typography.scss';
+@import './reset.scss';
+
+body {
+  font-family: var(--family);
+  font-style: normal;
+  font-size: 11px;
+  line-height: 16px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+*::-webkit-scrollbar-track {
+  border-radius: 4px;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: #CBD3DF;
+  border-radius: 16px;
+  border: 0px solid #F2F4F9;
+}
+
+/* set button(top and bottom of the scrollbar) */
+*::-webkit-scrollbar-button {
+  display:none;
+}
+
+/* ======================= Custom scroll ======================= */
+.custom-scrollbar {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 12px;
+  height: 100%;
+  background: #F2F4F9;
+  border-radius: 4px;
+  z-index: 9999; /* чтобы быть уверенным, что он поверх всего контента */
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.custom-scrollbar:hover {
+  opacity: 1;
+}
+
+.custom-scrollbar-thumb {
+  position: absolute;
+  right: 0;
+  width: 12px;
+  border-radius: 16px;
+  background: #CBD3DF;
+}
+
+.custom-scrollbar-horizontal {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 12px;
+  width: 100%;
+  background: #F2F4F9;
+  border-radius: 4px;
+  z-index: 9999; /* чтобы быть уверенным, что он поверх всего контента */
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.custom-scrollbar-horizontal:hover {
+  opacity: 1;
+}
+
+.custom-scrollbar-thumb-horizontal {
+  position: absolute;
+  bottom: 0;
+  height: 12px;
+  border-radius: 16px;
+  background: #CBD3DF;
+}
+/* ======================= Custom scroll ======================= */
